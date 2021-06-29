@@ -4,11 +4,11 @@ const router = express.Router()
 
 //registration
 router.get("/user/customerregistration" ,(req,res)=>{
-    res.render("customerregistration")
+    res.render("customerRegistration")
 });
 
 
-router.post("/user/customerregistration", validation.validateRegisterNull, validation.validateRegisterPw, validation.validateRegisterCfpw, (req, res, next) =>{ 
+router.post("/user/customerRegistration", validation.validateRegisterNull, validation.validateRegisterPw, validation.validateRegisterCfpw, (req, res, next) =>{ 
    res.redirect("/");
 })
 
