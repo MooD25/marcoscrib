@@ -40,7 +40,7 @@ module.exports = {
           req.body.pw == '' || 
           req.body.cfpw == ''
           ) {
-              res.render("Customer-Registration", {
+              res.render("customerRegistration", {
                 errorMsg : "Forms must be filled out",
                 cfpwValue : req.body.cfpw,
                 pwValue : req.body.pw,
@@ -54,7 +54,7 @@ module.exports = {
       const pw = new RegExp(/^[a-z0-9]{6,12}/i)
       if (!pw.test(req.body.pw)) {
   
-        res.render("Customer-Registration", {
+        res.render("customerRegistration", {
           errorMsg : "Password invalid, must have 6-12 characters or numbers",
           cfpwValue : req.body.cfpw,
           pwValue : req.body.pw,
@@ -66,7 +66,7 @@ module.exports = {
     },
     validateRegisterCfpw(req, res, next) {
       if (req.body.pw !== req.body.cfpw) {
-        res.render("Customer-Registration", {
+        res.render("customerRegistration", {
           errorMsg : "Your passwords do not match",
           cfpwValue : req.body.cfpw,
           pwValue : req.body.pw,
