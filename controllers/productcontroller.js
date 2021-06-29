@@ -5,20 +5,20 @@ const router = express.Router();
 //productlisting
 router.get("/product/listing", (req, res) => {
   const allproducts = productmodel.getAllProducts();
-  res.render("listing-page", {
+  res.render("listingPage", {
     allproducts,
   });
 });
 
 //listings
 router.get("/product/details", (req, res) => {
-  res.render("property-details-page");
+  res.render("propertyDetailsPage");
 });
 
 router.get("/product/:id", (req, res) => {
   const id = parseInt(req.params.id);
 
-  res.render("Property-Details-Page", {
+  res.render("propertyDetailsPage", {
     product: productmodel.getAProduct(id),
   });
 });

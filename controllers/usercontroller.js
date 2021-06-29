@@ -4,7 +4,7 @@ const router = express.Router()
 
 //registration
 router.get("/user/customerregistration" ,(req,res)=>{
-    res.render("customer-registration")
+    res.render("customerregistration")
 });
 
 
