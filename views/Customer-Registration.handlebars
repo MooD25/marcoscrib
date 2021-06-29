@@ -1,0 +1,22 @@
+<section id="Customer-Registration-Container">
+    <h1>
+        Customer Registration
+    </h1>
+    <form action="/user/customerregistration" method="POST">
+        <div class="form-group">
+            <input name="fname" value="{{ fname }}" type="text" class="form-control" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <input name="lname" value="{{ lname }}" type="text" class="form-control" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <input name="pw" value="{{ pwValue }}" type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <input name="cfpw" value="{{ cfpwValue }}" type="password" class="form-control"
+                placeholder="Confirm Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p>{{ errorMsg }}</p>
+    </form>
+</section>

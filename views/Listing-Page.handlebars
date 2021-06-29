@@ -1,0 +1,21 @@
+<section id="listing-section">
+    <h2>Featured Products</h2>
+
+
+    <div>
+        {{#each allproducts}}
+        <a href="{{ this.id}}">
+        <div class="product-img">
+            <figure class="figure">
+                <img src="{{ this.smllimg }}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption">
+                    <p>Title : {{this.title}}</p>
+                    <p>Price : {{this.price}}</p>
+                    <p>Details {{this.details}}</p>
+                </figcaption>
+            </figure>
+        </div>
+        </a>
+        {{/each}}
+  </div>
+</section>
