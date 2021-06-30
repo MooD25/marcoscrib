@@ -3,7 +3,7 @@ const validation = require("../middleware/validation.js")
 const router = express.Router()
 
 //registration
-router.get("/user/customerregistration" ,(req,res)=>{
+router.get("/user/customerRegistration" ,(req,res)=>{
     res.render("customerRegistration")
 });
 
